@@ -1,3 +1,5 @@
+import "./Profile.css";
+
 export default function Profile() {
   return (
     <section className="card" style={{ padding: 18 }}>

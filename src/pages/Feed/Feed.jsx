@@ -1,5 +1,5 @@
-import ContactList from "../components/ContactList/ContactList";
-import "./feed.css";
+import ContactList from "../../components/ContactList/ContactList";
+import "./Feed.css";
 
 export default function Feed() {
   return (
