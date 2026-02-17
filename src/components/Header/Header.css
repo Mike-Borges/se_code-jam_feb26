@@ -1,0 +1,21 @@
+.th-header {
+  background: linear-gradient(0deg, var(--linen-cream), #ffffff);
+  border-bottom: 1px solid var(--line);
+}
+.th-header__inner {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.th-header__brand {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+.th-header__chip {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  font-size: 13px;
+}

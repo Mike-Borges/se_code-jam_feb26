@@ -1,0 +1,28 @@
+.th-tabs {
+  border-bottom: 1px solid var(--line);
+  background: var(--linen-cream);
+}
+.th-tabs__inner {
+  height: 44px;
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.th-tab {
+  padding: 10px 14px;
+  border-radius: 12px 12px 0 0;
+  border: 1px solid transparent;
+  font-weight: 600;
+  opacity: 0.85;
+}
+.th-tab:hover {
+  opacity: 1;
+}
+
+.th-tab.is-active {
+  background: var(--paper);
+  border-color: var(--line);
+  border-bottom-color: var(--paper);
+  opacity: 1;
+}

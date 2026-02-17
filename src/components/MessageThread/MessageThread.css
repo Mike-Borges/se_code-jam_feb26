@@ -1,0 +1,58 @@
+.thread {
+  height: calc(100vh - 56px - 44px - 52px);
+  min-height: 520px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  overflow: hidden;
+}
+
+.thread__scroll {
+  padding: 16px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: rgba(241, 201, 141, 0.08);
+}
+
+.bubbleRow {
+  display: flex;
+}
+.bubbleRow.left {
+  justify-content: flex-start;
+}
+.bubbleRow.right {
+  justify-content: flex-end;
+}
+
+.bubble {
+  max-width: 686px;
+  padding: 18px 18px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  font-size: 13px;
+  line-height: 1.25rem;
+}
+
+.thread__composer {
+  display: grid;
+  grid-template-columns: 1fr 46px;
+  gap: 10px;
+  padding: 12px;
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+.composer__input {
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  padding: 0 12px;
+}
+.composer__send {
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(122, 45, 45, 0.08);
+  cursor: pointer;
+}

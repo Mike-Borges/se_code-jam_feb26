@@ -1,0 +1,16 @@
+.th-view {
+  padding: 18px 0 26px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr var(--sidebar);
+  gap: var(--gap);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
