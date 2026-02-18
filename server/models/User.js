@@ -21,6 +21,7 @@ const userSchema = new mongoose.Schema({
     required: true,
     minlength: 6,
   },
+  friends: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
 }, { timestamps: true });
 
 userSchema.pre("save", async function () {

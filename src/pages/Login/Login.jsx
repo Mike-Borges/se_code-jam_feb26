@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import "../Register/Register.css";
+import logo from "../../assets/chronicle-logo.svg";
 
 export default function Login({ onLogin }) {
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ export default function Login({ onLogin }) {
   return (
     <div className="login-container">
       <div className="login-card">
-        <div className="login-image-circle"></div>
+        <img src={logo} alt="Chronicle" className="login-image-circle" />
         <h1 className="login-title">Be Close Again!</h1>
 
         {error && <p className="auth-error">{error}</p>}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <circle cx="16" cy="16" r="15" fill="#7a2e2e"/>
+  <circle cx="16" cy="16" r="13.5" fill="none" stroke="#edc28a" stroke-width="0.5"/>
+  <!-- Simplified book -->
+  <g transform="translate(16,19)">
+    <path d="M-1,0 C-1,-5 -2,-8 -7,-9 L-7,2 C-3,1 -1,3 -1,3Z" fill="#f5ebdd" stroke="#5a4632" stroke-width="0.4"/>
+    <path d="M1,0 C1,-5 2,-8 7,-9 L7,2 C3,1 1,3 1,3Z" fill="#fffaf2" stroke="#5a4632" stroke-width="0.4"/>
+    <line x1="0" y1="-9" x2="0" y2="3" stroke="#5a4632" stroke-width="0.4"/>
+  </g>
+  <!-- Quill -->
+  <g transform="translate(16,9)">
+    <path d="M0,2 L-1,-2 C-1,-2 0,-5 0,-5 C0,-5 1,-2 1,-2Z" fill="#edc28a" stroke="#5a4632" stroke-width="0.3"/>
+    <line x1="0" y1="2" x2="0" y2="4" stroke="#5a4632" stroke-width="0.4"/>
+  </g>
+  <!-- C letter hint -->
+  <text x="16" y="29" font-family="Georgia, serif" font-size="5" font-weight="bold" fill="#edc28a" text-anchor="middle">C</text>
+</svg>

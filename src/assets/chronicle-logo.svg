@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="96" fill="#7a2e2e"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#edc28a" stroke-width="2"/>
+
+  <!-- Open book / journal -->
+  <g transform="translate(100,118)">
+    <!-- Left page -->
+    <path d="M-4,0 C-4,-30 -10,-48 -42,-52 C-42,-52 -44,-52 -44,-50 L-44,10 C-44,12 -42,12 -42,12 C-14,8 -4,20 -4,20Z" fill="#f5ebdd" stroke="#5a4632" stroke-width="1.5"/>
+    <!-- Right page -->
+    <path d="M4,0 C4,-30 10,-48 42,-52 C42,-52 44,-52 44,-50 L44,10 C44,12 42,12 42,12 C14,8 4,20 4,20Z" fill="#fffaf2" stroke="#5a4632" stroke-width="1.5"/>
+    <!-- Spine line -->
+    <line x1="0" y1="-50" x2="0" y2="20" stroke="#5a4632" stroke-width="1.5"/>
+    <!-- Page lines left -->
+    <line x1="-34" y1="-34" x2="-12" y2="-30" stroke="#c18a6b" stroke-width="0.8" opacity="0.5"/>
+    <line x1="-36" y1="-24" x2="-12" y2="-20" stroke="#c18a6b" stroke-width="0.8" opacity="0.5"/>
+    <line x1="-38" y1="-14" x2="-12" y2="-10" stroke="#c18a6b" stroke-width="0.8" opacity="0.5"/>
+    <line x1="-38" y1="-4" x2="-12" y2="0" stroke="#c18a6b" stroke-width="0.8" opacity="0.5"/>
+    <!-- Page lines right -->
+    <line x1="12" y1="-30" x2="34" y2="-34" stroke="#c18a6b" stroke-width="0.8" opacity="0.5"/>
+    <line x1="12" y1="-20" x2="36" y2="-24" stroke="#c18a6b" stroke-width="0.8" opacity="0.5"/>
+    <line x1="12" y1="-10" x2="38" y2="-14" stroke="#c18a6b" stroke-width="0.8" opacity="0.5"/>
+    <line x1="12" y1="0" x2="38" y2="-4" stroke="#c18a6b" stroke-width="0.8" opacity="0.5"/>
+  </g>
+
+  <!-- Clock hand / quill hint above book -->
+  <g transform="translate(100,56)">
+    <!-- Quill / pen nib -->
+    <path d="M0,8 L-3,-8 C-3,-8 0,-24 0,-24 C0,-24 3,-8 3,-8Z" fill="#edc28a" stroke="#5a4632" stroke-width="1"/>
+    <line x1="0" y1="8" x2="0" y2="18" stroke="#5a4632" stroke-width="1.5"/>
+  </g>
+
+  <!-- "Chronicle" text on a curved path -->
+  <defs>
+    <path id="textArc" d="M 38,148 A 70,70 0 0,0 162,148"/>
+  </defs>
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="bold" letter-spacing="3" fill="#edc28a">
+    <textPath href="#textArc" startOffset="50%" text-anchor="middle">CHRONICLE</textPath>
+  </text>
+</svg>

@@ -1,0 +1,147 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: var(--linen-cream);
+  border-radius: var(--r-lg);
+  width: min(480px, calc(100% - 32px));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.modal__tabs {
+  display: flex;
+  border-bottom: 1px solid var(--line);
+}
+
+.modal__tab {
+  flex: 1;
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: var(--walnut);
+  font-size: 14px;
+}
+
+.modal__tab--active {
+  background: var(--warm-sand);
+  color: var(--deep-maroon);
+}
+
+.modal__body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal__heading {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 22px;
+  margin: 0;
+  color: var(--deep-maroon);
+}
+
+.modal__dateRow {
+  display: flex;
+  gap: 10px;
+}
+
+.modal__select {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--walnut);
+  font-size: 13px;
+}
+
+.modal__textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--walnut);
+  font-size: 14px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.modal__caption {
+  min-height: 60px;
+}
+
+.modal__btn {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--warm-sand);
+  background: var(--deep-maroon);
+  color: var(--linen-cream);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.modal__btn:hover {
+  background: var(--soft-rust);
+}
+
+.modal__btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.modal__fileLabel {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--deep-maroon);
+  background: var(--linen-cream);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.modal__fileLabel:hover {
+  background: var(--soft-rust);
+}
+
+.modal__fileInput {
+  display: none;
+}
+
+.modal__previews {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.modal__preview {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--line);
+}
+
+.modal__error {
+  color: var(--deep-maroon);
+  font-size: 13px;
+  margin: 0;
+}

@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f5f5f5;
+  background: url("../../assets/home_background.jpg") center / cover no-repeat;
 }
 
 /* Main card */
@@ -21,14 +21,13 @@
   position: relative;
 }
 
-/* Circle image placeholder */
+/* Circle logo */
 .login-image-circle {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  border: 2px solid #000;
-  background: #c5c5c5;
   margin-bottom: 24px;
+  object-fit: cover;
 }
 
 /* Title */
