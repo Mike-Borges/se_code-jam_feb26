@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import API_URL from "../../config";
 import ContactList from "../../components/ContactList/ContactList";
 import AddMemoryModal from "../../components/AddMemoryModal/AddMemoryModal";
 import "./Feed.css";
@@ -33,7 +34,7 @@ export default function Feed() {
     const token = localStorage.getItem("token");
     if (!token) return;
 
-    fetch("/api/posts", {
+    fetch(`${API_URL}/api/posts`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -117,7 +118,7 @@ export default function Feed() {
                     {post.type === "photo" && post.images.length > 0 ? (
                       <img
                         className="memory__thumb"
-                        src={`/uploads/${post.images[0]}`}
+                        src={`${API_URL}/uploads/${post.images[0]}`}
                         alt="memory"
                       />
                     ) : (

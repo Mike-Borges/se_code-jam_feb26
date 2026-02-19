@@ -1,4 +1,5 @@
 import { useState } from "react";
+import API_URL from "../../config";
 import "./AddMemoryModal.css";
 
 const MONTHS = [
@@ -58,7 +59,7 @@ export default function AddMemoryModal({ onClose, onCreated }) {
         files.forEach((f) => formData.append("photos", f));
       }
 
-      const res = await fetch("/api/posts", {
+      const res = await fetch(`${API_URL}/api/posts`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,

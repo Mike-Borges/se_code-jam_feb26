@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import API_URL from "../../config";
 import "./ContactList.css";
 
 export default function ContactList({ title = "Contacts", onFriendsChange }) {
@@ -15,7 +16,7 @@ export default function ContactList({ title = "Contacts", onFriendsChange }) {
 
   const fetchFriends = () => {
     if (!token) return;
-    fetch("/api/friends", { headers: { Authorization: `Bearer ${token}` } })
+    fetch(`${API_URL}/api/friends`, { headers: { Authorization: `Bearer ${token}` } })
       .then((res) => res.json())
       .then((data) => { if (Array.isArray(data)) setFriends(data); })
       .catch(() => {});
@@ -23,7 +24,7 @@ export default function ContactList({ title = "Contacts", onFriendsChange }) {
 
   const fetchRequests = () => {
     if (!token) return;
-    fetch("/api/friends/requests", { headers: { Authorization: `Bearer ${token}` } })
+    fetch(`${API_URL}/api/friends/requests`, { headers: { Authorization: `Bearer ${token}` } })
       .then((res) => res.json())
       .then((data) => { if (Array.isArray(data)) setRequests(data); })
       .catch(() => {});
@@ -31,7 +32,7 @@ export default function ContactList({ title = "Contacts", onFriendsChange }) {
 
   const fetchSent = () => {
     if (!token) return;
-    fetch("/api/friends/sent", { headers: { Authorization: `Bearer ${token}` } })
+    fetch(`${API_URL}/api/friends/sent`, { headers: { Authorization: `Bearer ${token}` } })
       .then((res) => res.json())
       .then((data) => { if (Array.isArray(data)) setSent(data); })
       .catch(() => {});
@@ -50,7 +51,7 @@ export default function ContactList({ title = "Contacts", onFriendsChange }) {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/friends/request", {
+      const res = await fetch(`${API_URL}/api/friends/request`, {
         method: "POST",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
         body: JSON.stringify({ identifier: identifier.trim() }),
@@ -75,7 +76,7 @@ export default function ContactList({ title = "Contacts", onFriendsChange }) {
 
   const handleAccept = async (requestId) => {
     try {
-      const res = await fetch(`/api/friends/accept/${requestId}`, {
+      const res = await fetch(`${API_URL}/api/friends/accept/${requestId}`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -90,7 +91,7 @@ export default function ContactList({ title = "Contacts", onFriendsChange }) {
 
   const handleDecline = async (requestId) => {
     try {
-      const res = await fetch(`/api/friends/decline/${requestId}`, {
+      const res = await fetch(`${API_URL}/api/friends/decline/${requestId}`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -102,7 +103,7 @@ export default function ContactList({ title = "Contacts", onFriendsChange }) {
 
   const handleCancel = async (requestId) => {
     try {
-      const res = await fetch(`/api/friends/request/${requestId}`, {
+      const res = await fetch(`${API_URL}/api/friends/request/${requestId}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -114,7 +115,7 @@ export default function ContactList({ title = "Contacts", onFriendsChange }) {
 
   const handleRemove = async (friendId) => {
     try {
-      const res = await fetch(`/api/friends/${friendId}`, {
+      const res = await fetch(`${API_URL}/api/friends/${friendId}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
