@@ -44,7 +44,7 @@ export default function Login({ onLogin }) {
     <div className="login-container">
       <div className="login-card">
         <img src={logo} alt="Chronicle" className="login-image-circle" />
-        <h1 className="login-title">Be Close Again!</h1>
+        <h1 className="login-title">Happy Chronicling!</h1>
 
         {error && <p className="auth-error">{error}</p>}
 
